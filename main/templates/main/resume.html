@@ -1,0 +1,242 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> -->
+    <title>Othmane ECHCHABI - Resume</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/w3.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/resume.css' %}">
+    <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif; font-weight: 100;}
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="w3-card-4 w3-white container">
+        <div style="padding: 30px;">
+            <header>
+                <h1 style=" text-align: center;" id="name">Othmane Echchabi</h1>
+                <div id="designation">
+                    <p style="font-size: 1.1em; text-align: center">
+                        <a href="mailto:echchaabiothmane@gmail.com" class="organization">echchaabiothmane@gmail.com</a> - 
+                        <a href="https://www.linkedin.com/in/othmaneechchabi/" class="organization" target="_blank">https://www.linkedin.com/in/othmaneechchabi/</a> - 
+                        <a href="https://github.com/othmaneechc" class="organization" target="_blank">https://github.com/othmaneechc</a>
+                    </p>
+                    <p style="font-size: 1.15em; text-align: center; line-height: 1.15;">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </p>
+                </div>
+            </header>
+
+            <section id="Education">
+                <h2 style="font-weight: 350; text-align: center; font-size: 1.35em; margin-bottom: 0px">EDUCATION</h2>
+                <hr style="border-top: 1px solid black; margin-bottom: 10px; margin-top: 0px;">
+                <section class="School">
+                    <!-- 1st School -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Duke Kunshan University (DKU) / Duke University (Duke) Dual Degree
+                        <span style="float:right; font-weight: normal">Aug 2020 - Dec 2024</span>
+                    </h3>
+                    <h3 style="line-height: 1.15; text-align:left;  margin-top: 0;  margin-bottom: 0;">
+                        <i>B.S. in Interdisciplinary Studies - Subplans: Data Science (by Duke)</i>
+                        <span style="float:right;">Durham, NC, USA<br>&nbsp; &nbsp; &nbsp;Kunshan, China</span><br>
+                        <i>B.S. in Data Science (by DKU)</i>
+                    </h3>
+                    <ul style="font-size: 1.15em; line-height: 1.15;">
+                        <li>GPA: 3.7/4.0</li>
+                        <li>Merit-based Scholarship recipient; Dean’s List: Spring 2021</li>
+                        <li>Key courses: Data Structures and Algorithms, Probability and Statistics, Risk Analysis and Forecasting</li>
+                    </ul>
+                    <!-- 2nd School -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">University Carlos III Madrid
+                        <span style="float:right; font-weight: normal">Jan 2022 - May 2022</span>
+                    </h3>
+                    <h3 style="margin-top: 0;  margin-bottom: 0;"><i>Study Abroad, Data Engineering Bachelor</i>
+                        <span style="float:right;">Léganes, Madrid, Spain</span>
+                    </h3>
+                    <ul style="font-size: 1.15em; line-height: 1.15;">
+                        <li>Key courses: Machine Learning I, Computer Networks, Data Structures and Algorithms
+                    </ul>
+                </section>
+            </section>
+
+            <section id="Professional Experience">
+                <h2 style="  font-weight: 350; text-align: center; font-size: 1.35em; margin-bottom: 0px;" class="title">PROFESSIONAL EXPERIENCE</h2>
+                <hr style="border-top: 1px solid black; margin-bottom: 10px; margin-top: 0px;">
+                <!-- 1st Job -->
+                <section class="Job">
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Atos Morocco
+                        <span style="float:right; font-weight: normal;">Aug 2020 - Dec 2024</span>
+                    </h3>
+                    <h3 style="margin-top: 0;  margin-bottom: 0;">
+                        <i>Data Analysis Intern</i>
+                        <span style="float:right;">Rabat, Morocco</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Created dashboards that provided real-time insights into HR metrics, to facilitate the leadership’s decisionmaking regarding employee turnover, recruitment, or training activities.</li>
+                        <li>Rolled out the solution in the Morocco branch and later expanded to all company branches in Africa.</li>
+                    </ul>
+                </section>
+                <!-- 2nd Job -->
+                <section class="Job">
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">XPerlean
+                        <span style="float:right; font-weight: normal;">Jul 2022 - Aug 2022</span>
+                    </h3>
+                    <h3 style="margin-top: 0;  margin-bottom: 0;">
+                        <i>Data Analysis and IA Intern</i>
+                        <span style="float:right;">Saint-Quentin, France</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Automated the inventory data analysis process by developing a custom API using Python-Django and REST.</li>
+                        <li>Studied the behavior of inventory operators and analyzed factors such as meteorological data to identify the most effective ones.</li>
+                        <li>Implemented machine learning algorithms to predict inventory trends and stock levels.</li>
+                    </ul>
+                </section>
+                <!-- 3rd Job -->
+                <section class="Job">
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Al Jazeera Media Institute
+                        <span style="float:right; font-weight: normal;">Nov 2021 - Dec 2021</span>
+                    </h3>
+                    <h3 style="margin-top: 0;  margin-bottom: 0;">
+                        <i>Digital Media Intern</i>
+                        <span style="float:right;">Doha, Qatar</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Contributed to the Digital Media team by providing them with the data they needed to develop their Social Media content.</li>
+                        <li>Scraped large-scale CSV data files using social media APIs such as YouTube and Facebook, processing over 200,000 data records within a given timeframe.</li>
+                        <li>Utilized multithreading Python libraries to efficiently extract data and ensure accuracy.</li>
+                    </ul>
+                </section>
+                <!-- 4th Job -->
+                <section class="Job">
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Super Cerame
+                        <span style="float:right; font-weight: normal;">Jun 2021 - Aug 2021</span>
+                    </h3>
+                    <h3 style="margin-top: 0;  margin-bottom: 0;">
+                        <i>Data Analysis Intern</i>
+                        <span style="float:right;">Casablanca, Morocco</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Assisted with the company's transition from Industry 3.0 to Industry 4.0.</li>
+                        <li>Accelerated the digitization process of the company’s inventory, reducing the time required to complete inventory by over 75%.</li>
+                        <li>Conducted data processing, cleaning, analysis, and storage using R, Python, and MySQL.</li>
+                        <li>Communicated insights to the company management board with the presence of the Chief Executive Officer.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section id="Research">
+                <h2 style="  font-weight: 350; text-align: center; font-size: 1.35em; margin-bottom: 0px">RESEARCH EXPERIENCE</h2>
+                <hr style="border-top: 1px solid black; margin-bottom: 10px; margin-top: 0px;">
+                <section class="Experience">
+                    <!-- Duke Kunshan University/Duke University -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Duke University
+                        <span style="float:right; font-weight: normal">Jun 2023 - Aug 2023</span>
+                    </h3>
+                    <h3 style="line-height: 1.15; text-align:left;  margin-top: 0; margin-bottom: 0;">
+                        <i>Research Assistant with Prof. Emily Bernhardt </i>
+                        <span style="float:right;">Durham, NC, USA</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Created a comprehensive geospacial database summarizing the extent of SWISLR and current knowledge within the North American Coastal Plain. Utilized ArcGIS to develop interactive maps showcasing the collected data.</li>
+                        <li>Applied NLP and text analysis techniques using Nltk and spaCy frameworks to map over 400 scholarly articles, enabling regional analysis of SWISLR discussions and identifying variabilities in information.</li>
+                    </ul>
+                </section>
+                <section class="Experience">
+                    <!-- Duke Kunshan University/Duke University -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Duke University
+                        <span style="float:right; font-weight: normal">Jan 2023 - Jun 2023</span>
+                    </h3>
+                    <h3 style="line-height: 1.15; text-align:left;  margin-top: 0; margin-bottom: 0;">
+                        <i>Research Assistant with Prof. Volker Blum</i>
+                        <span style="float:right;">Durham, NC, USA</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Contributed to the development of an open database of existing, predicted, and newly synthesized organic-inorganic hybrid materials to facilitate accelerated development of this materials space as part of a joint project between Duke University and SpringerMaterials. </li>
+                        <li>Utilized plot digitizers and Django for data extraction and digitization. Extracted and upload over 10,000 data points to an SQL database.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section id="Personal Projects">
+                <h2 style="  font-weight: 350; text-align: center; font-size: 1.35em; margin-bottom: 0px">PERSONAL PROJECTS</h2>
+                <hr style="border-top: 1px solid black; margin-bottom: 10px; margin-top: 0px;">
+                    <section class="Experience">
+                        <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0; margin-bottom: 0px;">Pacman Reinforcement Learning</h3>
+                        <h3 style="font-style: italic; margin-top: 0px;">
+                            <a href="https://github.com/othmaneechc/pacman-RL" class="organization" target="_blank">othmaneechc/pacman-RL</a>
+                        </h3>
+                        <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                            <li>Developed a Reinforcement Learning (RL) model for Pacman, integrating it with the machine learning software Weka.</li>
+                            <li>Achieved a 35% increase in the average Pacman score by leveraging Weka’s machine learning capabilities compared to previous RL-only approaches using a Q-learning algorithm.</li>
+                        </ul>
+                    </section>
+            </section>
+
+            <section id="AdditionalExperience">
+                <h2 style="  font-weight: 350; text-align: center; font-size: 1.35em; margin-bottom: 0px">ADDITIONAL EXPERIENCE</h2>
+                <hr style="border-top: 1px solid black; margin-bottom: 10px; margin-top: 0px;">
+                <section class="Experience">
+                    <!-- Duke Kunshan University/Duke University -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Duke Kunshan University/Duke University
+                        <span style="float:right; font-weight: normal">Jan 2022 - Present</span>
+                    </h3>
+                    <h3 style="line-height: 1.15; text-align:left;  margin-top: 0; margin-bottom: 0;">
+                        <i>Peer Tutor</i>
+                        <span style="float:right;">Kunshan, China/ Durham, NC, USA</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Served as a peer tutor for calculus at Duke Kunshan University and multivariable calculus at Duke University.</li>
+                        <li>Assisted students with course material, homework assignments, and exam preparation.</li>
+                    </ul>
+                </section>
+                <section class="Experience">
+                    <!-- FIFA World Cup 2022 Volunteer -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">FIFA World Cup 2022 Volunteer
+                        <span style="float:right; font-weight: normal">Nov 2022 - Dec 2022</span>
+                    </h3>
+                    <h3 style="line-height: 1.15; text-align:left;  margin-top: 0; margin-bottom: 0;">
+                        <i>Spectator Services Volunteer – Team Leader</i>
+                        <span style="float:right;">Doha, Qatar</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Led a team of volunteers in providing exceptional customer service and assisting spectators with their needs.</li>
+                        <li>Guided spectators to their seats in two venues with a capacity of 45,000 seats each.</li>
+                        <li>Contributed to the success of the event by providing a positive and memorable experience for spectators.</li>
+                    </ul>
+                </section>
+                <section class="Experience">
+                    <!-- Addictest Casablanca/Counseling Educational Group -->
+                    <h3 style="font-weight: 400; font-size: 1.12em; margin-bottom: 0;">Addictest Casablanca/Counseling Educational Group
+                        <span style="float:right; font-weight: normal">Aug 2021 - Present</span>
+                    </h3>
+                    <h3 style="line-height: 1.15; text-align:left;  margin-top: 0; margin-bottom: 0;">
+                        <i>Part-time Academic Consultant and Math Tutor</i>
+                        <span style="float:right;">Remote/Casablanca, Morocco</span>
+                    </h3>
+                    <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                        <li>Assisted students with selecting colleges, completing applications, and preparing for interviews.</li>
+                        <li>Tutored college applicants in SAT Math, helping them improve their scores and increase their chances of getting into their desired colleges.</li>
+                    </ul>
+                </section>
+            </section>
+            
+            <section id="Skills">
+                <h2 style="  font-weight: 350; text-align: center; font-size: 1.35em; margin-bottom: 0px">SKILLS</h2>
+                <hr style="border-top: 1px solid black; margin-bottom: 10px; margin-top: 0px;">
+                <ul style="font-size: 1.1em; line-height: 1.15; margin-top: 0; margin-bottom: 0;">
+                    <li>Programming Languages: Python, Java, R, CSS, HTML, JavaScript, and SQL</li>
+                    <li>Frameworks: TensorFlow, Django, NumPy, SciPy, Pandas, Scikit-learn, Matplotlib, Seaborn, and Ggplot.</li>
+                    <li>Global Leadership Academy Discover Base Camp in Spring 2021 Certificate</li>
+                    <li>Recipient of 20,000 RMB grant from the DKU iNNOVATION iNCUBATOR for AI related project</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-transparent" style="font-family: Raleway, sans-serif; font-weight: 100;">
+  <a class="navbar-brand" href="{% url 'home' %}">
+    <img src="{% static 'images/logo1.png' %}" width="130" height="40" alt="Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item{% if request.path == '/' %} active{% endif %}">
+        <a class="nav-link" href="{% url 'home' %}">Dashboard {% if request.path == '/' %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if request.path == '/researches/' %} active{% endif %}">
+        <a class="nav-link" href="{% url 'researches' %}">Research Experience {% if request.path == '/researches/' %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if request.path == '/projects/' %} active{% endif %}">
+        <a class="nav-link" href="{% url 'projects' %}">Personal Projects {% if request.path == '/projects/' %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if request.path == '/resume/' %} active{% endif %}">
+        <a class="nav-link" href="{% url 'resume' %}">Resume {% if request.path == '/resume/' %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if request.path == '/stories/' %} active{% endif %}">
+        <a class="nav-link" href="{% url 'stories' %}">Travel Stories {% if request.path == '/stories/' %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if request.path == '/articles/' %} active{% endif %}">
+        <a class="nav-link" href="{% url 'articles' %}">Articles {% if request.path == '/articles/' %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

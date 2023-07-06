@@ -1,0 +1,105 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/w3.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/articles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+    <h1><b>{{article.title}}</b></h1>
+    <p>Othmane Echchabi</p>
+</header>
+
+    <!-- w3-content defines a container for fixed-size centered content, 
+        and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width:1400px">
+
+        <!-- Grid -->
+        <div style="margin-left: 150px; margin-right: 150px; opacity: 0.85;" class="w3-row">
+
+            <!-- Main Content -->
+            <div class="w3-col m8">
+
+                <!-- Blog entry -->
+                <div class="w3-card-4 w3-margin w3-white">
+                    <img class="w3-center" src="{% static 'images/' %}{{ article.image }}2.png" alt="Nature"
+                        width="100%" height="100%">
+                    <br>
+                    <br>
+                    <div class="w3-container">
+                        <p style="font-size: 15px; margin-left: 50px; margin-right: 50px; margin-top: 50px; margin-bottom: 50px;">{{article.content|linebreaksbr}}</p>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Add Comment Button -->
+                <div class="w3-card-4 w3-margin w3-white">
+                    <button style="margin-bottom: 25px; margin-top: 25px; margin-left: 100px;" onclick="document.getElementById('commentPopup').style.display='block'">Add Comment</button>
+                </div>
+
+                <!-- Comment Popup -->
+                <div id="commentPopup" class="w3-modal">
+                    <div class="w3-modal-content">
+                        <header class="w3-container w3-center w3-padding-32">
+                            <h1>Add Comment</h1>
+                            <span onclick="document.getElementById('commentPopup').style.display='none'"
+                                class="w3-button w3-display-topright">&times;</span>
+                        </header>
+                        <div style="margin-bottom: 25px" class="w3-card-4 w3-margin w3-white">
+                            <br>
+                            <form style="margin-left: 100px;" action="" method="POST">
+                                {% csrf_token %}
+                                {% for field in comment %}
+                                {{field.label_tag}}
+                                {{field}}
+                                <span style="display: block; margin-bottom: 1em;"></span>
+                                {% endfor %}
+                                <input style="margin-bottom: 25px" type="submit" name="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="w3-col m4">
+                <div class="w3-card w3-margin w3-margin-top">
+                    <div class="w3-container w3-padding">
+                        <h4 style="color: white;"><b>Suggested Articles</b></h4>
+                    </div>
+                    <ul class="w3-ul w3-hoverable w3-white">
+                        <li class="w3-padding-16">
+                            <img src="{% static 'images/article1.jpg' %}" alt="Article 1" class="w3-left w3-margin-right"
+                                style="width:50px">
+                            <span class="w3-large">Article 1</span><br>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="{% static 'images/article2.jpg' %}" alt="Article 2" class="w3-left w3-margin-right"
+                                style="width:50px">
+                            <span class="w3-large">Article 2</span><br>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="{% static 'images/article3.jpg' %}" alt="Article 3" class="w3-left w3-margin-right"
+                                style="width:50px">
+                            <span class="w3-large">Article 3</span><br>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

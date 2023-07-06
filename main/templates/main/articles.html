@@ -1,0 +1,60 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/w3.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/articles.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+  <div class="w3-content centered-content">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-32">
+      <br>
+      <br>
+      <h1 style="color: white;"><b>Ideas, Anecdotes, and Reflections</b></h1>
+      <h4 style="color: white;">Imaginative Narratives and Unconventional Musings</h4>
+    </header>
+
+    <!-- Blog entries -->
+    <div class="blog-entries">
+      {% for i in articles|slice:"::-1" %}
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-white blog-entry">
+        <!-- <img src="/images/tokyo.png" alt="Nature" style="width:100%"> -->
+        <img src="{% static 'images/' %}{{ i.image }}1.png" alt="Nature" width="100%" height="300">
+        <div class="w3-container">
+          <h3><b>{{i.title}}</b></h3>
+          <h5><span class="w3-opacity">{{i.date}}</span></h5>
+        </div>
+
+        <div class="w3-container">
+          <p>{{i.description}}</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><a href="{% url 'article' i.title %}"
+                  class="w3-button w3-padding-large w3-left w3-white">READ MORE »</a></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+            </div>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+</body>
+
+{% endblock %}
